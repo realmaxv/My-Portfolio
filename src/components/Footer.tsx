@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail, Heart } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:contact@example.com', label: 'Email' },
+    { icon: Github, href: "#", label: "GitHub" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:contact@example.com", label: "Email" },
   ];
 
   return (
@@ -27,16 +27,28 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2">
-              <a href="/" className="block text-gray-400 hover:text-accent-500 transition-colors duration-200">
+              <a
+                href="/"
+                className="block text-gray-400 hover:text-accent-500 transition-colors duration-200"
+              >
                 Home
               </a>
-              <a href="/work" className="block text-gray-400 hover:text-accent-500 transition-colors duration-200">
+              <a
+                href="/work"
+                className="block text-gray-400 hover:text-accent-500 transition-colors duration-200"
+              >
                 My Work
               </a>
-              <a href="/about" className="block text-gray-400 hover:text-accent-500 transition-colors duration-200">
+              <a
+                href="/about"
+                className="block text-gray-400 hover:text-accent-500 transition-colors duration-200"
+              >
                 About Me
               </a>
-              <a href="/contact" className="block text-gray-400 hover:text-accent-500 transition-colors duration-200">
+              <a
+                href="/contact"
+                className="block text-gray-400 hover:text-accent-500 transition-colors duration-200"
+              >
                 Contact
               </a>
             </div>
@@ -68,7 +80,7 @@ const Footer = () => {
             animate={{ opacity: 1 }}
             className="flex items-center justify-center space-x-1"
           >
-            <span>© 2024 Portfolio. Made with</span>
+            <span>© 2025 Max Voßgätter. Made with</span>
             <motion.span
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1, repeat: Infinity, repeatDelay: 2 }}
