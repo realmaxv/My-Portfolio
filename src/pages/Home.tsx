@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import ProjectCard from "../components/ProjectCard";
 import TestimonialCard from "../components/TestimonialCard";
 import { Code2, Zap, Users, Award } from "lucide-react";
-import me from "../assets/me.jpeg";
+import me2 from "../assets/me2.png";
 
 const Home = () => {
   const featuredProjects = [
@@ -167,11 +167,11 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="relative z-10 rounded-2xl overflow-hidden">
+                <div className="relative z-10 rounded-2xl overflow-hidden ">
                   <img
-                    src={me}
+                    src={me2}
                     alt="Developer workspace"
-                    className="w-full h-98 object-cover  "
+                    className="w-100 h-99 object-cover bg-dark-900  p-2 rounded-full"
                   />
                 </div>
                 <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-r from-accent-500/20 to-neon-blue/20 rounded-2xl -z-10" />

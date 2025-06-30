@@ -1,86 +1,105 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import PageTransition from '../components/PageTransition';
-import ProjectCard from '../components/ProjectCard';
-import { Filter } from 'lucide-react';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import PageTransition from "../components/PageTransition";
+import ProjectCard from "../components/ProjectCard";
+import { Filter } from "lucide-react";
 
 const Work = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState("all");
 
   const projects = [
     {
-      id: '1',
-      title: 'E-Commerce Platform',
-      description: 'Eine vollständige E-Commerce-Lösung mit React, TypeScript und Stripe-Integration für nahtlose Zahlungsabwicklung und Benutzerverwaltung.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Stripe', 'Node.js'],
-      category: 'web',
-      githubUrl: '#',
-      liveUrl: '#',
+      id: "1",
+      title: "E-Commerce Platform",
+      description:
+        "Eine vollständige E-Commerce-Lösung mit React, TypeScript und Stripe-Integration für nahtlose Zahlungsabwicklung und Benutzerverwaltung.",
+      image:
+        "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Stripe",
+        "Node.js",
+      ],
+      category: "web",
+      githubUrl: "#",
+      liveUrl: "#",
       featured: true,
     },
     {
-      id: '2',
-      title: 'Dashboard Analytics',
-      description: 'Interaktives Dashboard mit Echtzeitdaten, fortgeschrittenen Visualisierungen und benutzerdefinierten Berichten.',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'D3.js', 'Node.js', 'MongoDB'],
-      category: 'web',
-      githubUrl: '#',
-      liveUrl: '#',
+      id: "2",
+      title: "Dashboard Analytics",
+      description:
+        "Interaktives Dashboard mit Echtzeitdaten, fortgeschrittenen Visualisierungen und benutzerdefinierten Berichten.",
+      image:
+        "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["React", "D3.js", "Node.js", "MongoDB"],
+      category: "web",
+      githubUrl: "#",
+      liveUrl: "#",
     },
     {
-      id: '3',
-      title: 'Mobile Fitness App',
-      description: 'Cross-platform mobile Anwendung für Fitness-Tracking mit Social Features und Gamification.',
-      image: 'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React Native', 'Expo', 'Firebase', 'Redux'],
-      category: 'mobile',
-      githubUrl: '#',
-      liveUrl: '#',
+      id: "3",
+      title: "Mobile Fitness App",
+      description:
+        "Cross-platform mobile Anwendung für Fitness-Tracking mit Social Features und Gamification.",
+      image:
+        "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["React Native", "Expo", "Firebase", "Redux"],
+      category: "mobile",
+      githubUrl: "#",
+      liveUrl: "#",
     },
     {
-      id: '4',
-      title: 'Corporate Website',
-      description: 'Moderne Unternehmenswebsite mit CMS-Integration, SEO-Optimierung und responsivem Design.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Next.js', 'Sanity CMS', 'Tailwind CSS'],
-      category: 'web',
-      githubUrl: '#',
-      liveUrl: '#',
+      id: "4",
+      title: "Corporate Website",
+      description:
+        "Moderne Unternehmenswebsite mit CMS-Integration, SEO-Optimierung und responsivem Design.",
+      image:
+        "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["Next.js", "Sanity CMS", "Tailwind CSS"],
+      category: "web",
+      githubUrl: "#",
+      liveUrl: "#",
     },
     {
-      id: '5',
-      title: 'Task Management Tool',
-      description: 'Kollaboratives Projektmanagement-Tool mit Kanban-Board, Zeiterfassung und Team-Chat.',
-      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Vue.js', 'Express.js', 'Socket.io', 'PostgreSQL'],
-      category: 'web',
-      githubUrl: '#',
-      liveUrl: '#',
+      id: "5",
+      title: "Task Management Tool",
+      description:
+        "Kollaboratives Projektmanagement-Tool mit Kanban-Board, Zeiterfassung und Team-Chat.",
+      image:
+        "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["Vue.js", "Express.js", "Socket.io", "PostgreSQL"],
+      category: "web",
+      githubUrl: "#",
+      liveUrl: "#",
     },
     {
-      id: '6',
-      title: 'Restaurant Booking App',
-      description: 'Mobile App für Restaurantreservierungen mit Echtzeit-Verfügbarkeit und Bewertungssystem.',
-      image: 'https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Flutter', 'Dart', 'Firebase', 'Google Maps API'],
-      category: 'mobile',
-      githubUrl: '#',
-      liveUrl: '#',
+      id: "6",
+      title: "Restaurant Booking App",
+      description:
+        "Mobile App für Restaurantreservierungen mit Echtzeit-Verfügbarkeit und Bewertungssystem.",
+      image:
+        "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["Flutter", "Dart", "Firebase", "Google Maps API"],
+      category: "mobile",
+      githubUrl: "#",
+      liveUrl: "#",
     },
   ];
 
   const filters = [
-    { id: 'all', label: 'Alle Projekte' },
-    { id: 'web', label: 'Web Development' },
-    { id: 'mobile', label: 'Mobile Apps' },
-    { id: 'design', label: 'UI/UX Design' },
+    { id: "all", label: "Alle Projekte" },
+    { id: "web", label: "Web Development" },
+    { id: "mobile", label: "Mobile Apps" },
+    { id: "design", label: "UI/UX Design" },
   ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
+  const filteredProjects =
+    activeFilter === "all"
+      ? projects
+      : projects.filter((project) => project.category === activeFilter);
 
   return (
     <PageTransition>
@@ -102,7 +121,7 @@ const Work = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
             >
-              Eine Sammlung meiner besten Projekte, die moderne Technologien, 
+              Eine Sammlung meiner besten Projekte, die moderne Technologien,
               kreative Lösungen und außergewöhnliches Design kombinieren.
             </motion.p>
           </div>
@@ -129,8 +148,8 @@ const Work = () => {
                   onClick={() => setActiveFilter(filter.id)}
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                     activeFilter === filter.id
-                      ? 'bg-gradient-to-r from-accent-500 to-accent-600 text-white shadow-lg shadow-accent-500/25'
-                      : 'bg-dark-800/50 backdrop-blur-sm border border-dark-700 text-gray-300 hover:border-accent-500/50 hover:text-white'
+                      ? "bg-gradient-to-r from-accent-500 to-accent-600 text-white shadow-lg shadow-accent-500/25"
+                      : "bg-dark-800/50 backdrop-blur-sm border border-dark-700 text-gray-300 hover:border-accent-500/50 hover:text-white"
                   }`}
                 >
                   {filter.label}
@@ -194,7 +213,8 @@ const Work = () => {
               viewport={{ once: true }}
               className="text-gray-400 text-lg mb-8 leading-relaxed"
             >
-              Lassen Sie uns über Ihre Ideen sprechen und gemeinsam etwas Großartiges schaffen.
+              Lassen Sie uns über Ihre Ideen sprechen und gemeinsam etwas
+              Großartiges schaffen.
             </motion.p>
             <motion.a
               href="/contact"

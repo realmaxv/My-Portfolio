@@ -1,56 +1,50 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import PageTransition from '../components/PageTransition';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import PageTransition from "../components/PageTransition";
+import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 2000);
   };
 
   const contactInfo = [
     {
       icon: Mail,
-      title: 'Email',
-      detail: 'kontakt@example.com',
-      link: 'mailto:kontakt@example.com'
+      title: "Email",
+      detail: "kontakt@example.com",
+      link: "mailto:kontakt@example.com",
     },
     {
       icon: Phone,
-      title: 'Telefon',
-      detail: '+49 123 456 789',
-      link: 'tel:+49123456789'
+      title: "Telefon",
+      detail: "+49 123 456 789",
+      link: "tel:+49123456789",
     },
     {
       icon: MapPin,
-      title: 'Standort',
-      detail: 'Berlin, Deutschland',
-      link: 'https://maps.google.com'
-    }
+      title: "Standort",
+      detail: "Berlin, Deutschland",
+      link: "https://maps.google.com",
+    },
   ];
 
   return (
@@ -73,8 +67,8 @@ const Contact = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
             >
-              Haben Sie ein Projekt im Sinn oder möchten Sie einfach nur Hallo sagen? 
-              Ich freue mich darauf, von Ihnen zu hören!
+              Haben Sie ein Projekt im Sinn oder möchten Sie einfach nur Hallo
+              sagen? Ich freue mich darauf, von Ihnen zu hören!
             </motion.p>
           </div>
         </section>
@@ -89,11 +83,14 @@ const Contact = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h2 className="text-3xl font-bold mb-8">Lassen Sie uns sprechen</h2>
+                <h2 className="text-3xl font-bold mb-8">
+                  Lassen Sie uns sprechen
+                </h2>
                 <p className="text-gray-400 text-lg mb-12 leading-relaxed">
-                  Ich bin immer offen für neue Projekte und interessante Herausforderungen. 
-                  Ob Sie eine komplette Website benötigen oder nur eine schnelle Beratung wünschen - 
-                  kontaktieren Sie mich gerne!
+                  Ich bin immer offen für neue Projekte und interessante
+                  Herausforderungen. Ob Sie eine komplette Website benötigen
+                  oder nur eine schnelle Beratung wünschen - kontaktieren Sie
+                  mich gerne!
                 </p>
 
                 <div className="space-y-8">
@@ -128,10 +125,13 @@ const Contact = () => {
                 >
                   <div className="flex items-center space-x-3 mb-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="font-semibold text-green-400">Verfügbar für neue Projekte</span>
+                    <span className="font-semibold text-green-400">
+                      Verfügbar für neue Projekte
+                    </span>
                   </div>
                   <p className="text-gray-400">
-                    Ich nehme derzeit neue Projekte an. Durchschnittliche Antwortzeit: 24 Stunden.
+                    Ich nehme derzeit neue Projekte an. Durchschnittliche
+                    Antwortzeit: 24 Stunden.
                   </p>
                 </motion.div>
               </motion.div>
@@ -144,10 +144,26 @@ const Contact = () => {
                 className="bg-dark-800/30 backdrop-blur-sm border border-dark-700 rounded-2xl p-8"
               >
                 {!isSubmitted ? (
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form
+                    name="kontakt"
+                    method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    onSubmit={handleSubmit}
+                    className="space-y-6"
+                  >
+                    <input type="hidden" name="form-name" value="kontakt" />
+                    <p hidden>
+                      <label>
+                        Don’t fill this out: <input name="bot-field" />
+                      </label>
+                    </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                        <label
+                          htmlFor="name"
+                          className="block text-sm font-medium text-gray-300 mb-2"
+                        >
                           Name *
                         </label>
                         <input
@@ -162,7 +178,10 @@ const Contact = () => {
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        <label
+                          htmlFor="email"
+                          className="block text-sm font-medium text-gray-300 mb-2"
+                        >
                           Email *
                         </label>
                         <input
@@ -179,7 +198,10 @@ const Contact = () => {
                     </div>
 
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label
+                        htmlFor="subject"
+                        className="block text-sm font-medium text-gray-300 mb-2"
+                      >
                         Betreff
                       </label>
                       <input
@@ -194,7 +216,10 @@ const Contact = () => {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label
+                        htmlFor="message"
+                        className="block text-sm font-medium text-gray-300 mb-2"
+                      >
                         Nachricht *
                       </label>
                       <textarea
@@ -220,7 +245,11 @@ const Contact = () => {
                         <>
                           <motion.div
                             animate={{ rotate: 360 }}
-                            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                            transition={{
+                              duration: 1,
+                              repeat: Infinity,
+                              ease: "linear",
+                            }}
                             className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
                           />
                           <span>Wird gesendet...</span>
@@ -242,14 +271,21 @@ const Contact = () => {
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
+                      transition={{
+                        delay: 0.2,
+                        type: "spring",
+                        stiffness: 200,
+                      }}
                       className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
                     >
                       <CheckCircle className="w-10 h-10 text-white" />
                     </motion.div>
-                    <h3 className="text-2xl font-bold mb-4">Nachricht gesendet!</h3>
+                    <h3 className="text-2xl font-bold mb-4">
+                      Nachricht gesendet!
+                    </h3>
                     <p className="text-gray-400 mb-6">
-                      Vielen Dank für Ihre Nachricht. Ich werde mich so schnell wie möglich bei Ihnen melden.
+                      Vielen Dank für Ihre Nachricht. Ich werde mich so schnell
+                      wie möglich bei Ihnen melden.
                     </p>
                     <motion.button
                       onClick={() => setIsSubmitted(false)}
@@ -283,20 +319,24 @@ const Contact = () => {
               {[
                 {
                   question: "Wie lange dauert ein typisches Projekt?",
-                  answer: "Die Projektdauer variiert je nach Umfang und Komplexität. Einfache Websites können in 2-4 Wochen fertiggestellt werden, während komplexere Anwendungen 2-6 Monate in Anspruch nehmen können."
+                  answer:
+                    "Die Projektdauer variiert je nach Umfang und Komplexität. Einfache Websites können in 2-4 Wochen fertiggestellt werden, während komplexere Anwendungen 2-6 Monate in Anspruch nehmen können.",
                 },
                 {
                   question: "Bieten Sie auch Wartung und Support an?",
-                  answer: "Ja, ich biete fortlaufende Wartung und Support für alle meine Projekte an. Das umfasst Updates, Sicherheitskorrekturen und technischen Support."
+                  answer:
+                    "Ja, ich biete fortlaufende Wartung und Support für alle meine Projekte an. Das umfasst Updates, Sicherheitskorrekturen und technischen Support.",
                 },
                 {
                   question: "Arbeiten Sie remote oder vor Ort?",
-                  answer: "Ich arbeite hauptsächlich remote, bin aber auch bereit für persönliche Meetings in Berlin und Umgebung. Die meiste Kommunikation erfolgt über moderne Tools wie Slack, Zoom und Figma."
+                  answer:
+                    "Ich arbeite hauptsächlich remote, bin aber auch bereit für persönliche Meetings in Berlin und Umgebung. Die meiste Kommunikation erfolgt über moderne Tools wie Slack, Zoom und Figma.",
                 },
                 {
                   question: "Wie gestaltet sich der Projektablauf?",
-                  answer: "Jedes Projekt beginnt mit einem ausführlichen Briefing, gefolgt von Konzeption, Design, Entwicklung und Testing. Ich halte Sie in jeder Phase auf dem Laufenden und hole regelmäßig Feedback ein."
-                }
+                  answer:
+                    "Jedes Projekt beginnt mit einem ausführlichen Briefing, gefolgt von Konzeption, Design, Entwicklung und Testing. Ich halte Sie in jeder Phase auf dem Laufenden und hole regelmäßig Feedback ein.",
+                },
               ].map((faq, index) => (
                 <motion.div
                   key={index}
@@ -306,7 +346,9 @@ const Contact = () => {
                   viewport={{ once: true }}
                   className="bg-dark-800/50 backdrop-blur-sm border border-dark-700 rounded-2xl p-6 hover:border-accent-500/30 transition-all duration-500"
                 >
-                  <h3 className="text-xl font-semibold mb-3 text-accent-500">{faq.question}</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-accent-500">
+                    {faq.question}
+                  </h3>
                   <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
                 </motion.div>
               ))}

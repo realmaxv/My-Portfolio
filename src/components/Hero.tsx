@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import RotatingText from "../blocks/TextAnimations/RotatingText/RotatingText";
 
 const Hero = () => {
   return (
@@ -55,7 +56,28 @@ const Hero = () => {
         >
           Moderne Webentwicklung
           <br />
-          <span className="text-accent-500">für Ihr Business</span>
+          <span className="text-accent-500 flex items-center gap-4">
+            für Ihr{" "}
+            <RotatingText
+              texts={[
+                "Unternehmen",
+                "Startup",
+                "Projekt",
+                "Konzept",
+                "Vorhaben",
+                "Business",
+              ]}
+              mainClassName="px-2 sm:px-2 md:px-3 bg-lime-400 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center text-dark-900 rounded-lg"
+              staggerFrom={"last"}
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-120%" }}
+              staggerDuration={0.025}
+              splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+              transition={{ type: "spring", damping: 30, stiffness: 400 }}
+              rotationInterval={2000}
+            />
+          </span>
         </motion.h1>
 
         {/* Subtitle */}
