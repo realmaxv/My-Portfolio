@@ -118,89 +118,89 @@ const Contact = () => {
               transition={{ duration: 0.8 }}
               className="bg-dark-800/30 border border-dark-700 rounded-2xl p-8"
             >
-              {!isSubmitted ? (
-                <form
-                  name="kontakt"
-                  method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                  className="space-y-6"
-                  onSubmit={() => setIsSubmitted(true)}
-                >
-                  <input type="hidden" name="form-name" value="kontakt" />
-                  <p hidden>
-                    <label>
-                      Don’t fill this out: <input name="bot-field" />
-                    </label>
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="text-sm font-medium text-gray-300 mb-2 block">
-                        Name *
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-dark-900/50 border border-dark-600 rounded-xl text-white placeholder-gray-500"
-                        placeholder="Ihr Name"
-                      />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium text-gray-300 mb-2 block">
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-dark-900/50 border border-dark-600 rounded-xl text-white placeholder-gray-500"
-                        placeholder="ihre.email@example.com"
-                      />
-                    </div>
-                  </div>
+              <form
+                name="kontakt"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                className={`space-y-6 ${isSubmitted ? "hidden" : ""}`}
+                onSubmit={() => setIsSubmitted(true)}
+              >
+                <input type="hidden" name="form-name" value="kontakt" />
+                <p hidden>
+                  <label>
+                    Don’t fill this out: <input name="bot-field" />
+                  </label>
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="text-sm font-medium text-gray-300 mb-2 block">
-                      Betreff
+                      Name *
                     </label>
                     <input
                       type="text"
-                      name="subject"
-                      value={formData.subject}
+                      name="name"
+                      value={formData.name}
                       onChange={handleInputChange}
+                      required
                       className="w-full px-4 py-3 bg-dark-900/50 border border-dark-600 rounded-xl text-white placeholder-gray-500"
-                      placeholder="Worum geht es?"
+                      placeholder="Ihr Name"
                     />
                   </div>
                   <div>
                     <label className="text-sm font-medium text-gray-300 mb-2 block">
-                      Nachricht *
+                      Email *
                     </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
                       onChange={handleInputChange}
                       required
-                      rows={6}
-                      className="w-full px-4 py-3 bg-dark-900/50 border border-dark-600 rounded-xl text-white placeholder-gray-500 resize-none"
-                      placeholder="Erzählen Sie mir von Ihrem Projekt..."
+                      className="w-full px-4 py-3 bg-dark-900/50 border border-dark-600 rounded-xl text-white placeholder-gray-500"
+                      placeholder="ihre.email@example.com"
                     />
                   </div>
-                  <motion.button
-                    type="submit"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full bg-gradient-to-r from-accent-500 to-accent-600 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center space-x-2"
-                  >
-                    <Send className="w-5 h-5" />
-                    <span>Nachricht senden</span>
-                  </motion.button>
-                </form>
-              ) : (
+                </div>
+                <div>
+                  <label className="text-sm font-medium text-gray-300 mb-2 block">
+                    Betreff
+                  </label>
+                  <input
+                    type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-dark-900/50 border border-dark-600 rounded-xl text-white placeholder-gray-500"
+                    placeholder="Worum geht es?"
+                  />
+                </div>
+                <div>
+                  <label className="text-sm font-medium text-gray-300 mb-2 block">
+                    Nachricht *
+                  </label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 bg-dark-900/50 border border-dark-600 rounded-xl text-white placeholder-gray-500 resize-none"
+                    placeholder="Erzählen Sie mir von Ihrem Projekt..."
+                  />
+                </div>
+                <motion.button
+                  type="submit"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full bg-gradient-to-r from-accent-500 to-accent-600 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center space-x-2"
+                >
+                  <Send className="w-5 h-5" />
+                  <span>Nachricht senden</span>
+                </motion.button>
+              </form>
+
+              {isSubmitted && (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
