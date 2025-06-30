@@ -121,6 +121,7 @@ const Contact = () => {
               <form
                 name="kontakt"
                 method="POST"
+                action="/contact-success"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 className={`space-y-6 ${isSubmitted ? "hidden" : ""}`}
