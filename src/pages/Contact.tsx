@@ -123,6 +123,9 @@ const Contact = () => {
                 method="POST"
                 action="/contact-success"
                 data-netlify="true"
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-expect-error
+                netlify
                 data-netlify-honeypot="bot-field"
                 className={`space-y-6 ${isSubmitted ? "hidden" : ""}`}
                 onSubmit={() => setIsSubmitted(true)}
