@@ -56,7 +56,7 @@ const Hero = () => {
         >
           Moderne Webentwicklung
           <br />
-          <span className="text-accent-500 flex items-center gap-4">
+          <span className="text-accent-500 flex items-center flex-col md:flex-row gap-4">
             für Ihr{" "}
             <RotatingText
               texts={[
