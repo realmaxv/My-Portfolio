@@ -121,15 +121,19 @@ const Contact = () => {
               <form
                 name="kontakt"
                 method="POST"
-                action="/contact-success"
+                action="/contact"
                 data-netlify="true"
                 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-expect-error
                 netlify
                 data-netlify-honeypot="bot-field"
+                data-netlify-recaptcha="true"
                 className={`space-y-6 ${isSubmitted ? "hidden" : ""}`}
                 onSubmit={() => setIsSubmitted(true)}
               >
+                <div className="mb-6">
+                  <div data-netlify-recaptcha="true"></div>
+                </div>
                 <input type="hidden" name="form-name" value="kontakt" />
                 <p hidden>
                   <label>
