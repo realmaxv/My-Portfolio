@@ -1,68 +1,109 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import PageTransition from '../components/PageTransition';
-import ProjectCard from '../components/ProjectCard';
-import { ArrowLeft, ExternalLink, Github, Calendar, User, Tag } from 'lucide-react';
+import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import PageTransition from "../components/PageTransition";
+import ProjectCard from "../components/ProjectCard";
+import tt1 from "../assets/tt1.png";
+import tt2 from "../assets/tt2.png";
+import tt3 from "../assets/tt3.png";
+import {
+  ArrowLeft,
+  ExternalLink,
+  Github,
+  Calendar,
+  User,
+  Tag,
+} from "lucide-react";
+
+type Project = {
+  id: string;
+  title: string;
+  description: string;
+  longDescription?: string;
+  image: string;
+  technologies: string[];
+  githubUrl: string;
+  liveUrl: string;
+  client?: string;
+  duration?: string;
+  category?: string;
+  gallery?: string[];
+  features?: string[];
+};
 
 const ProjectDetail = () => {
   const { id } = useParams();
 
-  // Mock project data - in a real app, this would come from an API
-  const project = {
-    id: '1',
-    title: 'E-Commerce Platform',
-    description: 'Eine vollständige E-Commerce-Lösung mit modernem Design und fortgeschrittenen Features',
-    longDescription: `Diese E-Commerce-Plattform wurde von Grund auf mit React und TypeScript entwickelt, um eine nahtlose Shopping-Erfahrung zu bieten. Das Projekt umfasst ein vollständiges Admin-Dashboard, Benutzerauthentifizierung, Produktverwaltung, Warenkorb-Funktionalität und integrierte Zahlungslösungen.
-
-Die Anwendung wurde mit Fokus auf Performance und Benutzererfahrung entwickelt. Alle Animationen und Übergänge sind sorgfältig optimiert, um eine flüssige Bedienung auf allen Geräten zu gewährleisten. Das responsive Design passt sich automatisch an verschiedene Bildschirmgrößen an.
-
-Ein besonderer Fokus lag auf der Sicherheit und Skalierbarkeit der Anwendung. Durch die Verwendung moderner Technologien und Best Practices konnten wir eine robuste Lösung schaffen, die auch bei hohem Traffic stabil funktioniert.`,
-    image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Stripe', 'Node.js', 'MongoDB'],
-    githubUrl: '#',
-    liveUrl: '#',
-    client: 'TechStart GmbH',
-    duration: '3 Monate',
-    category: 'E-Commerce',
-    gallery: [
-      'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
-    ],
-    features: [
-      'Responsive Design für alle Geräte',
-      'Benutzerauthentifizierung und -verwaltung',
-      'Produktkatalog mit Such- und Filterfunktionen',
-      'Warenkorb und Checkout-Prozess',
-      'Stripe-Zahlungsintegration',
-      'Admin-Dashboard für Produktverwaltung',
-      'E-Mail-Benachrichtigungen',
-      'SEO-Optimierung'
-    ]
-  };
-
-  const relatedProjects = [
+  const allProjects: Project[] = [
     {
-      id: '2',
-      title: 'Dashboard Analytics',
-      description: 'Interaktives Dashboard mit Echtzeitdaten und fortgeschrittenen Visualisierungen.',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'D3.js', 'Node.js'],
-      githubUrl: '#',
-      liveUrl: '#',
+      id: "1",
+      title: "TransTube",
+      description:
+        "Eine elegante Web-App zur KI-gestützten Analyse und Zusammenfassung von Webseiteninhalten – sprachenübergreifend.",
+      longDescription: `TransTube ist eine moderne, KI-gestützte Web-App, die lange Webseiten analysiert und deren Inhalte in klarer, verständlicher Sprache zusammenfasst – unabhängig von der Originalsprache.
+
+Die Anwendung wurde mit Fokus auf Benutzerfreundlichkeit, Performance und sprachliche Barrierefreiheit entwickelt. Durch die Kombination aus modernem Frontend-Stack und ausgelagerter KI-Logik bietet TransTube eine schnelle und präzise Inhaltsanalyse. Nutzer können gezielt nach Themen filtern und erhalten auf Knopfdruck eine strukturierte Zusammenfassung des Seiteninhalts – ganz ohne Sprachbarrieren.
+
+Ein stilvoller Dark Mode, flüssige Animationen sowie ein vollständig responsives Design machen die App zu einem angenehmen Werkzeug für die tägliche Online-Recherche.`,
+      image: `${tt3}`,
+      technologies: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Vite",
+        "React Router",
+      ],
+      githubUrl: "https://github.com/realmaxv/transtube-public",
+      liveUrl: "https://www.transtube.org/",
+      client: "Eigenprojekt",
+      duration: "2 Monate",
+      category: "KI / Webanalyse",
+      gallery: [tt3, tt2, tt1],
+      features: [
+        "KI-gestützte Webseiten-Zusammenfassung",
+        "Sprachenübergreifende Analyse (multilingual)",
+        "Stichwortbasierter Themenfilter",
+        "Dark Mode für angenehmes Lesen",
+        "Responsive Design für alle Geräte",
+        "Performanter Tech-Stack mit Vite und React",
+        "Trennung von Frontend und Backend (API via Supabase & OpenAI)",
+        "Modernes UI mit sanften Animationen",
+      ],
     },
     {
-      id: '3',
-      title: 'Mobile Fitness App',
-      description: 'Cross-platform mobile Anwendung für Fitness-Tracking mit Social Features.',
-      image: 'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React Native', 'Expo', 'Firebase'],
-      githubUrl: '#',
-      liveUrl: '#',
+      id: "2",
+      title: "Dashboard Analytics",
+      description:
+        "Interaktives Dashboard mit Echtzeitdaten und fortgeschrittenen Visualisierungen.",
+      image:
+        "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["React", "D3.js", "Node.js"],
+      githubUrl: "#",
+      liveUrl: "#",
+    },
+    {
+      id: "3",
+      title: "Mobile Fitness App",
+      description:
+        "Cross-platform mobile Anwendung für Fitness-Tracking mit Social Features.",
+      image:
+        "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["React Native", "Expo", "Firebase"],
+      githubUrl: "#",
+      liveUrl: "#",
     },
   ];
 
+  const project = allProjects.find((p) => p.id === id);
+  const relatedProjects = allProjects.filter((p) => p.id !== id);
+  if (!project) {
+    return (
+      <PageTransition>
+        <div className="pt-32 text-center text-gray-400 text-xl">
+          Projekt nicht gefunden.
+        </div>
+      </PageTransition>
+    );
+  }
   return (
     <PageTransition>
       <div className="pt-20">
@@ -141,8 +182,14 @@ Ein besonderer Fokus lag auf der Sicherheit und Skalierbarkeit der Anwendung. Du
                     whileTap={{ scale: 0.95 }}
                     className="bg-dark-800/50 backdrop-blur-sm border border-dark-700 text-white px-6 py-3 rounded-full font-semibold hover:border-accent-500/50 transition-all duration-300 flex items-center space-x-2"
                   >
-                    <Github className="w-5 h-5" />
-                    <span>Source Code</span>
+                    <Link
+                      className="flex items-center gap-2"
+                      to={project.githubUrl}
+                    >
+                      <Github className="w-5 h-5" />
+
+                      <span>Source Code</span>
+                    </Link>
                   </motion.a>
                 </div>
               </motion.div>
@@ -204,11 +251,16 @@ Ein besonderer Fokus lag auf der Sicherheit und Skalierbarkeit der Anwendung. Du
               className="prose prose-lg prose-invert max-w-none"
             >
               <h2 className="text-3xl font-bold mb-8">Projektübersicht</h2>
-              {project.longDescription.split('\n\n').map((paragraph, index) => (
-                <p key={index} className="text-gray-400 text-lg leading-relaxed mb-6">
-                  {paragraph}
-                </p>
-              ))}
+              {project.longDescription
+                ?.split("\n\n")
+                .map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="text-gray-400 text-lg leading-relaxed mb-6"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
             </motion.div>
           </div>
         </section>
@@ -226,7 +278,7 @@ Ein besonderer Fokus lag auf der Sicherheit und Skalierbarkeit der Anwendung. Du
               Key Features
             </motion.h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {project.features.map((feature, index) => (
+              {project.features?.map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -256,7 +308,7 @@ Ein besonderer Fokus lag auf der Sicherheit und Skalierbarkeit der Anwendung. Du
               Weitere Screenshots
             </motion.h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {project.gallery.map((image, index) => (
+              {project.gallery?.map((image, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -268,7 +320,7 @@ Ein besonderer Fokus lag auf der Sicherheit und Skalierbarkeit der Anwendung. Du
                   <img
                     src={image}
                     alt={`${project.title} Screenshot ${index + 1}`}
-                    className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-64 object-cover object-center  transition-transform duration-700 group-hover:scale-110"
                   />
                 </motion.div>
               ))}
@@ -289,7 +341,7 @@ Ein besonderer Fokus lag auf der Sicherheit und Skalierbarkeit der Anwendung. Du
               Weitere Projekte
             </motion.h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {relatedProjects.map((project, index) => (
+              {relatedProjects.map((project: Project, index: number) => (
                 <motion.div
                   key={project.id}
                   initial={{ opacity: 0, y: 30 }}

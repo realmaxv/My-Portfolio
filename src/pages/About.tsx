@@ -13,34 +13,61 @@ import {
 const About = () => {
   const skills = [
     {
-      category: "Frontend",
+      category: "Grundlagen Web-Development",
       technologies: [
-        "React",
-        "TypeScript",
-        "Next.js",
-        "Vue.js",
+        "HTML",
+        "CSS",
+        "JavaScript",
         "Tailwind CSS",
-        "Framer Motion",
+        "Responsives Design",
+        "Barrierefreiheit (a11y)",
       ],
     },
     {
-      category: "Backend",
+      category: "Plus Skills",
       technologies: [
-        "Node.js",
-        "Express.js",
-        "Python",
-        "PostgreSQL",
-        "MongoDB",
-        "Firebase",
+        "Versionskontrolle mit Git",
+        "Agiles Arbeiten (Scrum)",
+        "Projektmanagement mit Trello & GitHub",
+        "Clean Code (SOLID, DRY, KISS)",
       ],
     },
     {
-      category: "Mobile",
-      technologies: ["React Native", "Flutter", "Expo", "iOS", "Android"],
+      category: "TypeScript",
+      technologies: [
+        "Type Safety",
+        "Interfaces & Types",
+        "Type Guards",
+        "Modularisierung",
+      ],
     },
     {
-      category: "Tools & Others",
-      technologies: ["Git", "Docker", "AWS", "Figma", "Adobe Creative Suite"],
+      category: "React",
+      technologies: [
+        "JSX",
+        "Hooks (useState, useEffect)",
+        "Component Lifecycle",
+        "Routing mit React Router",
+        "Context API",
+      ],
+    },
+    {
+      category: "KI-unterstützte Entwicklung",
+      technologies: [
+        "Prompt Engineering",
+        "Copilot / ChatGPT",
+        "Automatisierte Code-Generierung",
+        "AI-gestützte Fehleranalyse",
+      ],
+    },
+    {
+      category: "Abschlussprojekt",
+      technologies: [
+        "Eigenständige Projektplanung",
+        "Teamarbeit & Code Reviews",
+        "Deployment (Netlify, Vercel)",
+        "Präsentation & Demo",
+      ],
     },
   ];
 
@@ -49,32 +76,35 @@ const About = () => {
       icon: Code2,
       title: "Clean Code",
       description:
-        "Ich schreibe sauberen, wartbaren Code, der Standards folgt und gut dokumentiert ist.",
+        "Ich schreibe sauberen, wartbaren Code – mit klaren Strukturen, Kommentaren und dem Blick für die Zukunft.",
     },
     {
       icon: Palette,
-      title: "Design-Focus",
+      title: "Design‑Focus",
       description:
-        "Perfekte Balance zwischen Ästhetik und Funktionalität für optimale User Experience.",
+        "Eine perfekte Balance aus Ästhetik und Funktionalität, damit deine Anwendung nicht nur gut aussieht, sondern auch intuitiv funktioniert.",
     },
     {
       icon: Zap,
       title: "Performance",
       description:
-        "Optimierung für Geschwindigkeit und Effizienz in allen Aspekten der Entwicklung.",
+        "Meine Lösungen sind auf Geschwindigkeit und Effizienz optimiert – für ein schnelles, reibungsloses Nutzererlebnis.",
     },
     {
       icon: Users,
-      title: "Zusammenarbeit",
+      title: "Empathie & Menschlichkeit",
       description:
-        "Transparente Kommunikation und enge Zusammenarbeit mit Kunden und Teams.",
+        "Ich höre genau zu – bei dir und deinen Nutzern. So entwickle ich nicht nur funktionale, sondern auch menschlich passende Lösungen.",
     },
   ];
-
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:contact@example.com", label: "Email" },
+    { icon: Github, href: "https://github.com/realmaxv/", label: "GitHub" },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/maxvossgaetter/",
+      label: "LinkedIn",
+    },
+    { icon: Mail, href: "mailto:kontakt@maxvossgaetter.de", label: "Email" },
   ];
 
   return (
@@ -151,10 +181,17 @@ const About = () => {
               viewport={{ once: true }}
               className="text-gray-400 text-xl leading-relaxed"
             >
-              Ich glaube daran, dass großartiges Design und solide Technik Hand
-              in Hand gehen müssen. Mein Ziel ist es, digitale Erlebnisse zu
-              schaffen, die nicht nur visuell beeindruckend sind, sondern auch
-              intuitiv bedienbar und technisch exzellent umgesetzt.
+              Meine Mission ist es, komplexe Prozesse sichtbar und greifbar zu
+              machen – für Menschen und Unternehmen gleichermaßen. Ich entwickle
+              Lösungen, die Abläufe vereinfachen und automatisieren, damit du
+              dich auf das Wesentliche konzentrieren kannst.
+              <br />
+              <br />
+              Mit jeder Zeile Code möchte ich echten Mehrwert schaffen – ohne
+              unnötigen Ballast, aber mit maximaler Wirkung. Ob kleine Webseite,
+              maßgeschneiderte App oder smarter Workflow: Mein Anspruch ist,
+              dass du damit Zeit sparst, effizienter arbeitest und spürbare
+              Vorteile gewinnst.
             </motion.p>
           </div>
         </section>
@@ -263,7 +300,6 @@ const About = () => {
             >
               Mein Werdegang
             </motion.h2>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -272,25 +308,21 @@ const About = () => {
               className="prose prose-lg prose-invert max-w-none"
             >
               <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                Meine Reise in die Welt der Webentwicklung begann vor über 3
-                Jahren mit einer einfachen Frage: Wie kann ich das Internet zu
-                einem besseren Ort machen? Diese Neugier führte mich zu HTML und
-                CSS, dann zu JavaScript und schließlich zu modernen Frameworks
-                wie React und Vue.js.
+                Vom Teamleiter in der Logistik zur Passion für Programmierung:
+                Meine erste App, entwickelt in VBA/Excel, prüfte automatisch die
+                Tagesfertigkeit und half, Kapazitäten dynamisch zu verteilen.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                Während meines Studiums der Informatik habe ich nicht nur die
-                technischen Grundlagen erlernt, sondern auch verstanden, wie
-                wichtig es ist, Technologie in den Dienst der Menschen zu
-                stellen. Jedes Projekt ist für mich eine Gelegenheit, diese
-                Philosophie in die Praxis umzusetzen.
+                Schnell erkannte ich: Viel spannender als das Tool an sich war
+                das Entwickeln dahinter. Nach meinem Jobwechsel habe ich eine
+                18‑wöchige Vollzeit‑Weiterbildung bei SuperCode abgeschlossen
+                und moderne Webtechnologien wie React, TypeScript und Tailwind
+                CSS intensiv gelernt.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                Heute arbeite ich mit Startups und etablierten Unternehmen
-                zusammen, um ihre digitalen Visionen zum Leben zu erwecken.
-                Dabei liegt mein Fokus immer auf der perfekten Balance zwischen
-                innovativem Design, robuster Technik und außergewöhnlicher
-                Benutzererfahrung.
+                Mein Fokus liegt nun darauf, kleinen Unternehmen und
+                Privatpersonen individuelle, effiziente Webseiten und Apps zu
+                erstellen – bezahlbar, performant und ohne Baukastensysteme.
               </p>
             </motion.div>
           </div>

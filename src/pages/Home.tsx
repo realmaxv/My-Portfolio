@@ -4,84 +4,41 @@ import Hero from "../components/Hero";
 import ProjectCard from "../components/ProjectCard";
 import TestimonialCard from "../components/TestimonialCard";
 import { Code2, Zap, Users, Award } from "lucide-react";
-import me2 from "../assets/me2.png";
+import me2 from "../assets/supercode.jpg";
 
 const Home = () => {
   const featuredProjects = [
     {
       id: "1",
-      title: "E-Commerce Platform",
+      title: "TransTube",
       description:
-        "Eine moderne E-Commerce-Lösung mit React, TypeScript und Stripe-Integration für nahtlose Zahlungsabwicklung.",
+        "Eine KI-gestützte Web-App zur Zusammenfassung und Analyse von Webseiteninhalten – unabhängig von Sprache oder Länge.",
       image:
-        "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Stripe"],
+        "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       githubUrl: "#",
-      liveUrl: "#",
+      liveUrl: "https://www.transtube.org/",
       featured: true,
-    },
-    {
-      id: "2",
-      title: "Dashboard Analytics",
-      description:
-        "Interaktives Dashboard mit Echtzeitdaten und fortgeschrittenen Visualisierungen.",
-      image:
-        "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "D3.js", "Node.js"],
-      githubUrl: "#",
-      liveUrl: "#",
-    },
-    {
-      id: "3",
-      title: "Mobile App UI",
-      description:
-        "Benutzerfreundliches Interface Design für eine mobile Fitness-Anwendung.",
-      image:
-        "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React Native", "Expo", "Firebase"],
-      githubUrl: "#",
-      liveUrl: "#",
     },
   ];
 
   const testimonials = [
     {
-      name: "Sarah Mueller",
-      role: "CEO",
-      company: "TechStart GmbH",
+      name: "Mentorin Elisa S.",
+      role: "Mentorin & Code Reviewer",
+      company: "SuperCode Bootcamp",
       content:
-        "Die Zusammenarbeit war außergewöhnlich. Das Projekt wurde pünktlich und mit höchster Qualität geliefert.",
-      avatar:
-        "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150",
-      rating: 5,
-    },
-    {
-      name: "Michael Weber",
-      role: "CTO",
-      company: "Innovation Labs",
-      content:
-        "Hervorragende technische Expertise und kreative Problemlösungen. Absolut empfehlenswert!",
-      avatar:
-        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150",
-      rating: 5,
-    },
-    {
-      name: "Anna Schmidt",
-      role: "Marketing Director",
-      company: "Digital Solutions",
-      content:
-        "Die neue Website hat unsere Conversion-Rate um 150% gesteigert. Fantastische Arbeit!",
-      avatar:
-        "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150",
+        "Max hat in seinem Übungsprojekt eine gut strukturierte Komponentenarchitektur umgesetzt und den Zustand effektiv mit React Hooks und Context verwaltet. Das Styling mit Tailwind ist durchdacht, und der Code ist sauber und gut lesbar. Besonders hervorzuheben ist sein Umgang mit semantischem HTML und die saubere Trennung der Verantwortlichkeiten. Insgesamt zeigt Max großes Engagement und ein starkes Verständnis moderner Webentwicklung.",
+      avatar: "https://avatar.iran.liara.run/public/86",
       rating: 5,
     },
   ];
 
   const stats = [
-    { icon: Code2, value: "50+", label: "Projekte" },
-    { icon: Users, value: "25+", label: "Zufriedene Kunden" },
-    { icon: Award, value: "3+", label: "Jahre Erfahrung" },
-    { icon: Zap, value: "99%", label: "Performance Score" },
+    { icon: Code2, value: "1 Jahr", label: "Intensive Weiterbildung" },
+    { icon: Users, value: "Viele", label: "Lernprojekte & Experimente" },
+    { icon: Award, value: "Leidenschaft", label: "für sauberen Code" },
+    { icon: Zap, value: "Fokus", label: "auf Performance & Qualität" },
   ];
 
   return (
@@ -128,7 +85,7 @@ const Home = () => {
 
         {/* About Preview Section */}
         <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -140,15 +97,13 @@ const Home = () => {
                   Über mich
                 </h2>
                 <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-                  Als leidenschaftlicher Frontend-Entwickler mit über 3 Jahren
-                  Erfahrung verwandle ich kreative Ideen in funktionale,
-                  benutzerfreundliche Webanwendungen. Mein Fokus liegt auf
-                  modernen Technologien und Performance-Optimierung.
+                  Vom Teamleiter in der Logistik zum Webentwickler – weil ich
+                  lieber Tools erschaffe, die Menschen Arbeit abnehmen.
                 </p>
                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                  Ich glaube daran, dass großartiges Design und solide Technik
-                  Hand in Hand gehen müssen, um außergewöhnliche digitale
-                  Erlebnisse zu schaffen.
+                  Heute programmiere ich mit Leidenschaft Webseiten und Apps mit
+                  React, TypeScript und modernen Technologien – effizient,
+                  individuell und bezahlbar.
                 </p>
                 <motion.a
                   href="/about"
@@ -167,14 +122,14 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="relative z-10 rounded-2xl overflow-hidden ">
+                <div className="relative z-10  flex  rounded-2xl overflow-hidden p-4 items-center justify-center ">
                   <img
                     src={me2}
                     alt="Developer workspace"
-                    className="w-100 h-99 object-cover bg-dark-900  p-2 rounded-full"
+                    className="w-100 h-99 object-cover bg-dark-900 outline-4 p-2 rounded-2xl"
                   />
                 </div>
-                <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-r from-accent-500/20 to-neon-blue/20 rounded-2xl -z-10" />
+                <div className="absolute -top-4 -left-4 w-full h-full   rounded-2xl -z-10" />
               </motion.div>
             </div>
           </div>
@@ -243,11 +198,10 @@ const Home = () => {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Was Kunden sagen
+                Was andere über mich sagen
               </h2>
               <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                Erfahrungen und Feedback von zufriedenen Kunden, die mit mir
-                zusammengearbeitet haben.
+                Erfahrungen und Feedback aus meiner Lern- und Entwicklungsphase.
               </p>
             </motion.div>
 

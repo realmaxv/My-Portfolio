@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ const Contact = () => {
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const navigation = useNavigate();
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -19,25 +21,30 @@ const Contact = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+
+    setTimeout(() => {
+      setIsSubmitted((old) => !old);
+      navigation("/");
+    }, 2000);
   };
 
   const contactInfo = [
     {
       icon: Mail,
       title: "Email",
-      detail: "kontakt@example.com",
-      link: "mailto:kontakt@example.com",
+      detail: "kontakt@maxvossgaetter.de",
+      link: "mailto:kontakt@maxvossgaetter.de",
     },
     {
       icon: Phone,
       title: "Telefon",
-      detail: "+49 123 456 789",
-      link: "tel:+49123456789",
+      detail: "+49 171 705 3012",
+      link: "tel:+491717053012",
     },
     {
       icon: MapPin,
       title: "Standort",
-      detail: "Berlin, Deutschland",
+      detail: "Castrop-Rauxel, Deutschland",
       link: "https://maps.google.com",
     },
   ];

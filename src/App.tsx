@@ -8,11 +8,13 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ProjectDetail from "./pages/ProjectDetail";
 import KontaktSuccess from "./pages/ContactSuccess";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-dark-900 text-white">
+      <ScrollToTop />
+      <div className="min-h-screen bg-dark-900 text-white  ">
         <Navigation />
         <AnimatePresence mode="wait">
           <Routes>
