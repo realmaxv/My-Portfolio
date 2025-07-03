@@ -3,9 +3,13 @@ import { Github, Linkedin, Mail, Heart } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:contact@example.com", label: "Email" },
+    { icon: Github, href: "https://github.com/realmaxv/", label: "GitHub" },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/maxvossgaetter",
+      label: "LinkedIn",
+    },
+    { icon: Mail, href: "mailto:kontakt@maxvossgaetter.de", label: "Email" },
   ];
 
   return (
@@ -16,9 +20,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
             <div className="space-y-2 text-gray-400">
-              <p>kontakt@example.com</p>
-              <p>+49 123 456 789</p>
-              <p>Berlin, Deutschland</p>
+              <p>kontakt@maxvossgaetter.de</p>
+
+              <p>Castrop-Rauxel, Deutschland</p>
             </div>
           </div>
 

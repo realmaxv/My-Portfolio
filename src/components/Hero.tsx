@@ -35,7 +35,7 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center gap-6">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,7 +56,7 @@ const Hero = () => {
         >
           Moderne Webentwicklung
           <br />
-          <span className="text-accent-500 flex items-center flex-col md:flex-row gap-4">
+          <span className="text-accent-500 flex items-center mt-4 flex-col md:flex-row gap-4">
             für Ihr{" "}
             <RotatingText
               texts={[

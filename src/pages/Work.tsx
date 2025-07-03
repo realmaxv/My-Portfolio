@@ -10,82 +10,16 @@ const Work = () => {
   const projects = [
     {
       id: "1",
-      title: "E-Commerce Platform",
+      title: "TransTube",
       description:
-        "Eine vollständige E-Commerce-Lösung mit React, TypeScript und Stripe-Integration für nahtlose Zahlungsabwicklung und Benutzerverwaltung.",
+        "Eine KI-gestützte Web-App zur Zusammenfassung und Analyse von Webseiteninhalten – unabhängig von Sprache oder Länge.",
       image:
-        "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: [
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Stripe",
-        "Node.js",
-      ],
-      category: "web",
+        "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       githubUrl: "#",
-      liveUrl: "#",
+      liveUrl: "https://www.transtube.org/",
       featured: true,
-    },
-    {
-      id: "2",
-      title: "Dashboard Analytics",
-      description:
-        "Interaktives Dashboard mit Echtzeitdaten, fortgeschrittenen Visualisierungen und benutzerdefinierten Berichten.",
-      image:
-        "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "D3.js", "Node.js", "MongoDB"],
-      category: "web",
-      githubUrl: "#",
-      liveUrl: "#",
-    },
-    {
-      id: "3",
-      title: "Mobile Fitness App",
-      description:
-        "Cross-platform mobile Anwendung für Fitness-Tracking mit Social Features und Gamification.",
-      image:
-        "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React Native", "Expo", "Firebase", "Redux"],
-      category: "mobile",
-      githubUrl: "#",
-      liveUrl: "#",
-    },
-    {
-      id: "4",
-      title: "Corporate Website",
-      description:
-        "Moderne Unternehmenswebsite mit CMS-Integration, SEO-Optimierung und responsivem Design.",
-      image:
-        "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["Next.js", "Sanity CMS", "Tailwind CSS"],
-      category: "web",
-      githubUrl: "#",
-      liveUrl: "#",
-    },
-    {
-      id: "5",
-      title: "Task Management Tool",
-      description:
-        "Kollaboratives Projektmanagement-Tool mit Kanban-Board, Zeiterfassung und Team-Chat.",
-      image:
-        "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["Vue.js", "Express.js", "Socket.io", "PostgreSQL"],
-      category: "web",
-      githubUrl: "#",
-      liveUrl: "#",
-    },
-    {
-      id: "6",
-      title: "Restaurant Booking App",
-      description:
-        "Mobile App für Restaurantreservierungen mit Echtzeit-Verfügbarkeit und Bewertungssystem.",
-      image:
-        "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["Flutter", "Dart", "Firebase", "Google Maps API"],
-      category: "mobile",
-      githubUrl: "#",
-      liveUrl: "#",
+      category: "",
     },
   ];
 
