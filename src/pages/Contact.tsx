@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +11,6 @@ const Contact = () => {
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const navigation = useNavigate();
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -21,11 +19,6 @@ const Contact = () => {
       ...formData,
       [e.target.name]: e.target.value,
     });
-
-    setTimeout(() => {
-      setIsSubmitted((old) => !old);
-      navigation("/");
-    }, 2000);
   };
 
   const contactInfo = [
