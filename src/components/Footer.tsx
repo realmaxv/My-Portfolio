@@ -21,7 +21,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
             <div className="space-y-2 text-gray-400">
               <p>kontakt@maxvossgaetter.de</p>
-
+              <p>Mobil: +49 171 705 3012</p>
               <p>Castrop-Rauxel, Deutschland</p>
             </div>
           </div>
