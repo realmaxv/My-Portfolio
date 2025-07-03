@@ -5,6 +5,7 @@ import ProjectCard from "../components/ProjectCard";
 import TestimonialCard from "../components/TestimonialCard";
 import { Code2, Zap, Users, Award } from "lucide-react";
 import me2 from "../assets/supercode.jpg";
+import avatarF from "../assets/avatarF.jpg";
 
 const Home = () => {
   const featuredProjects = [
@@ -29,7 +30,7 @@ const Home = () => {
       company: "SuperCode Bootcamp",
       content:
         "Max hat in seinem Übungsprojekt eine gut strukturierte Komponentenarchitektur umgesetzt und den Zustand effektiv mit React Hooks und Context verwaltet. Das Styling mit Tailwind ist durchdacht, und der Code ist sauber und gut lesbar. Besonders hervorzuheben ist sein Umgang mit semantischem HTML und die saubere Trennung der Verantwortlichkeiten. Insgesamt zeigt Max großes Engagement und ein starkes Verständnis moderner Webentwicklung.",
-      avatar: "https://avatar.iran.liara.run/public/86",
+      avatar: avatarF,
       rating: 5,
     },
   ];
