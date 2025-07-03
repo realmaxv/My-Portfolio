@@ -9,6 +9,7 @@ import {
   Linkedin,
   Mail,
 } from "lucide-react";
+import me from "../assets/meonstage.jpg";
 
 const About = () => {
   const skills = [
@@ -151,7 +152,7 @@ const About = () => {
               >
                 <div className="relative z-10 rounded-2xl overflow-hidden">
                   <img
-                    src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    src={me}
                     alt="Developer workspace"
                     className="w-full h-96 object-cover"
                   />
