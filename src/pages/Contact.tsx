@@ -28,12 +28,7 @@ const Contact = () => {
       detail: "kontakt@maxvossgaetter.de",
       link: "mailto:kontakt@maxvossgaetter.de",
     },
-    {
-      icon: Phone,
-      title: "Telefon",
-      detail: "+49 171 705 3012",
-      link: "tel:+491717053012",
-    },
+
     {
       icon: MapPin,
       title: "Standort",

@@ -69,28 +69,6 @@ Ein stilvoller Dark Mode, flüssige Animationen sowie ein vollständig responsiv
         "Modernes UI mit sanften Animationen",
       ],
     },
-    {
-      id: "2",
-      title: "Dashboard Analytics",
-      description:
-        "Interaktives Dashboard mit Echtzeitdaten und fortgeschrittenen Visualisierungen.",
-      image:
-        "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "D3.js", "Node.js"],
-      githubUrl: "#",
-      liveUrl: "#",
-    },
-    {
-      id: "3",
-      title: "Mobile Fitness App",
-      description:
-        "Cross-platform mobile Anwendung für Fitness-Tracking mit Social Features.",
-      image:
-        "https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React Native", "Expo", "Firebase"],
-      githubUrl: "#",
-      liveUrl: "#",
-    },
   ];
 
   const project = allProjects.find((p) => p.id === id);
