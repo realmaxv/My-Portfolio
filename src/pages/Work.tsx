@@ -19,7 +19,7 @@ const Work = () => {
       githubUrl: "#",
       liveUrl: "https://www.transtube.org/",
       featured: true,
-      category: "",
+      category: "web",
     },
   ];
 
