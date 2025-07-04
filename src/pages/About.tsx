@@ -9,7 +9,7 @@ import {
   Linkedin,
   Mail,
 } from "lucide-react";
-import me from "../assets/meonstage.jpg";
+import me from "../assets/supercode.jpg";
 
 const About = () => {
   const skills = [
@@ -154,7 +154,7 @@ const About = () => {
                   <img
                     src={me}
                     alt="Developer workspace"
-                    className="w-full h-96 object-cover"
+                    className="w-full h-100 object-cover"
                   />
                 </div>
                 <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-r from-accent-500/20 to-neon-blue/20 rounded-2xl -z-10" />

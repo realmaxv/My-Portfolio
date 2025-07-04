@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import ProjectCard from "../components/ProjectCard";
 import TestimonialCard from "../components/TestimonialCard";
 import { Code2, Zap, Users, Award } from "lucide-react";
-import me2 from "../assets/supercode.jpg";
+import me2 from "../assets/bewerbungsfoto.jpeg";
 import avatarF from "../assets/avatarF.jpg";
 
 const Home = () => {
@@ -127,7 +127,7 @@ const Home = () => {
                   <img
                     src={me2}
                     alt="Developer workspace"
-                    className="w-100 h-99 object-cover bg-dark-900 outline-4 p-2 rounded-2xl"
+                    className="w-100 h-99 object-cover bg-dark-900 outline-4  rounded-full outline-double"
                   />
                 </div>
                 <div className="absolute -top-4 -left-4 w-full h-full   rounded-2xl -z-10" />
