@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Menu, X, Code2 } from "lucide-react";
-
+import { Code2 } from "lucide-react";
+import { Squash as Hamburger } from "hamburger-react";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -80,11 +80,14 @@ const Navigation = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white transition-colors duration-200"
             >
-              {isOpen ? (
+              {
+                <Hamburger size={23} toggled={isOpen} />
+                /* {isOpen ? (
                 <X className="w-6 h-6" />
               ) : (
                 <Menu className="w-6 h-6" />
-              )}
+              )} */
+              }
             </motion.button>
           </div>
         </div>
