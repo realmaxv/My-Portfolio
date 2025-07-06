@@ -127,10 +127,10 @@ const About = () => {
                   Frontend-Entwickler
                 </h2>
                 <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                  Ich helfe speziell kleinen Unternehmen dabei, moderne,
-                  benutzerfreundliche Webanwendungen zu entwickeln, die nicht
-                  nur gut aussehen, sondern auch außergewöhnliche Performance
-                  bieten.
+                  Ich bin Frontend-Entwickler mit Fokus auf moderne
+                  Webtechnologien. Diese Seite dient als Portfolio, um meine
+                  Projekte, Skills und meinen Werdegang für Bewerbungen im
+                  Bereich Webentwicklung zu präsentieren.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <motion.a
@@ -182,17 +182,17 @@ const About = () => {
               viewport={{ once: true }}
               className="text-gray-400 text-xl leading-relaxed"
             >
-              Meine Mission ist es, komplexe Prozesse sichtbar und greifbar zu
-              machen – für Menschen und Unternehmen gleichermaßen. Ich entwickle
-              Lösungen, die Abläufe vereinfachen und automatisieren, damit du
-              dich auf das Wesentliche konzentrieren kannst.
+              Meine Mission ist es, meine Leidenschaft für Technologie und
+              Gestaltung in sinnvolle digitale Produkte zu verwandeln. Ich
+              möchte zeigen, dass guter Code nicht nur Maschinen steuert,
+              sondern echten Menschen hilft – im Alltag wie im Berufsleben.
               <br />
               <br />
-              Mit jeder Zeile Code möchte ich echten Mehrwert schaffen – ohne
-              unnötigen Ballast, aber mit maximaler Wirkung. Ob kleine Webseite,
-              maßgeschneiderte App oder smarter Workflow: Mein Anspruch ist,
-              dass du damit Zeit sparst, effizienter arbeitest und spürbare
-              Vorteile gewinnst.
+              Mein Ziel ist es, moderne Weblösungen zu bauen, die verständlich,
+              zugänglich und nützlich sind – egal ob Portfolio, App oder
+              interaktives Tool. Dabei setze ich auf Klarheit statt Komplexität,
+              auf Wirkung statt Schnickschnack – und auf den Mut, alles auf eine
+              Karte zu setzen.
             </motion.p>
           </div>
         </section>
@@ -321,9 +321,12 @@ const About = () => {
                 CSS intensiv gelernt.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                Mein Fokus liegt nun darauf, kleinen Unternehmen und
-                Privatpersonen individuelle, effiziente Webseiten und Apps zu
-                erstellen – bezahlbar, performant und ohne Baukastensysteme.
+                Heute setze ich alles auf eine Karte: Ich habe meine
+                Leidenschaft zum Beruf gemacht und verfolge entschlossen meinen
+                Weg in der Webentwicklung. Diese Seite ist mein Portfolio – kein
+                Verkaufsangebot, sondern Ausdruck meines Lernwegs, meiner
+                Fähigkeiten und meiner Motivation, Teil eines engagierten
+                Entwicklerteams zu werden.
               </p>
             </motion.div>
           </div>

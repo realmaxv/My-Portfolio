@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition";
 import ProjectCard from "../components/ProjectCard";
 import { Filter } from "lucide-react";
+import logo from "../assets/toktok/logo.png";
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -20,6 +21,18 @@ const Work = () => {
       liveUrl: "https://www.transtube.org/",
       featured: true,
       category: "web",
+    },
+    {
+      id: "2",
+      title: "TokTok",
+      description:
+        "Ein moderner Instagram-Clone mit Like-, Kommentar- und Profilfunktionen – entwickelt als Abschlussprojekt bei SuperCode.",
+      image: logo,
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
+      githubUrl: "https://github.com/realmaxv/toktok",
+      liveUrl: "#",
+      featured: true,
+      category: "mobile",
     },
   ];
 
