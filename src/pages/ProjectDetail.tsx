@@ -2,9 +2,9 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageTransition from "../components/PageTransition";
 import ProjectCard from "../components/ProjectCard";
-import tt1 from "../assets/tt1.png";
-import tt2 from "../assets/tt2.png";
-import tt3 from "../assets/tt3.png";
+import tt1 from "../assets/toktok/notification.png";
+import tt2 from "../assets/toktok/overview.png";
+import tt3 from "../assets/toktok/post.png";
 import {
   ArrowLeft,
   ExternalLink,
@@ -67,6 +67,41 @@ Ein stilvoller Dark Mode, flüssige Animationen sowie ein vollständig responsiv
         "Performanter Tech-Stack mit Vite und React",
         "Trennung von Frontend und Backend (API via Supabase & OpenAI)",
         "Modernes UI mit sanften Animationen",
+      ],
+    },
+    {
+      id: "2",
+      title: "TokTok",
+      description:
+        "Ein moderner Instagram-Clone mit Like-, Kommentar- und Profilfunktionen – entwickelt als Abschlussprojekt bei SuperCode.",
+      longDescription: `TokTok ist eine Social-Media-Web-App, die wir als Team im Rahmen unseres Abschlussprojekts bei SuperCode entwickelt haben. Die Anwendung bietet zentrale Instagram-Funktionen wie das Teilen von Bildern, Liken, Kommentieren und das Ansehen von Nutzerprofilen.
+
+Das Projekt wurde vollständig mit modernen Webtechnologien umgesetzt: React und TypeScript für eine robuste und skalierbare UI, TailwindCSS für performantes Styling sowie Supabase für Authentifizierung, Datenbank- und Medienverwaltung.
+
+TokTok wurde bewusst "mobile first" und benutzerfreundlich gestaltet und zeichnet sich durch ein klares Design, eine intuitive Benutzerführung und ein komponentenbasiertes Layout aus – ideal für mobile, aber auch Desktop-Anwendungen.`,
+      image: `${tt1}`,
+      technologies: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Supabase",
+        "React Router",
+      ],
+      githubUrl: "https://github.com/realmaxv/toktok",
+      liveUrl: "https://sctoktok.netlify.app/",
+      client: "Teamprojekt SuperCode",
+      duration: "Eine Woche",
+      category: "Social Media / Abschlussprojekt",
+      gallery: [tt1, tt2, tt3],
+      features: [
+        "Nutzerregistrierung & -login via Supabase Auth",
+        "Post-Erstellung mit Bild-Upload",
+        "Like- und Kommentarfunktion",
+        "Nutzerprofile mit eigenem Feed",
+        "Responsive Design für Desktop & Mobile",
+        "Moderne UI-Komponenten mit TailwindCSS",
+        "Datenhandling über Supabase Database & Storage",
+        "Teamarbeit mit Git & GitHub",
       ],
     },
   ];
@@ -298,7 +333,7 @@ Ein stilvoller Dark Mode, flüssige Animationen sowie ein vollständig responsiv
                   <img
                     src={image}
                     alt={`${project.title} Screenshot ${index + 1}`}
-                    className="w-full h-64 object-cover object-center  transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-100 object-cover object-center rounded-2xl transition-transform duration-700 group-hover:scale-110"
                   />
                 </motion.div>
               ))}

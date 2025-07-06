@@ -5,6 +5,7 @@ import ProjectCard from "../components/ProjectCard";
 import TestimonialCard from "../components/TestimonialCard";
 import { Code2, Zap, Users, Award } from "lucide-react";
 import me2 from "../assets/bewerbungsfoto.jpeg";
+import toktok from "../assets/toktok/logo.png";
 import avatarF from "../assets/avatarF.jpg";
 
 const Home = () => {
@@ -19,6 +20,17 @@ const Home = () => {
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       githubUrl: "#",
       liveUrl: "https://www.transtube.org/",
+      featured: true,
+    },
+    {
+      id: "2",
+      title: "TokTok",
+      description:
+        "Ein moderner Instagram-Clone mit Like-, Kommentar- und Profilfunktionen – entwickelt im Team als Abschlussprojekt bei SuperCode mit Supabase als Backend.",
+      image: toktok,
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
+      githubUrl: "https://github.com/realmaxv/toktok",
+      liveUrl: "https://sctoktok.netlify.app/",
       featured: true,
     },
   ];
