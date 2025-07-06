@@ -30,7 +30,7 @@ const Work = () => {
       image: logo,
       technologies: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
       githubUrl: "https://github.com/realmaxv/toktok",
-      liveUrl: "#",
+      liveUrl: "https://sctoktok.netlify.app/",
       featured: true,
       category: "mobile",
     },
