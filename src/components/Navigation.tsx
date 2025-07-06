@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Menu, X, Code2 } from "lucide-react";
+import { Code2 } from "lucide-react";
 import { Squash as Hamburger } from "hamburger-react";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
