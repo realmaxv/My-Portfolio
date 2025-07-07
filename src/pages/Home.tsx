@@ -162,7 +162,7 @@ const Home = () => {
                 Ausgewählte Projekte
               </h2>
               <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                Eine Auswahl meiner besten Arbeiten, die moderne Technologien
+                Eine Auswahl meiner letzten Arbeiten, die moderne Technologien
                 und kreative Lösungen kombinieren.
               </p>
             </motion.div>
