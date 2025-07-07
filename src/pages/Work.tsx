@@ -68,7 +68,7 @@ const Work = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
             >
-              Eine Sammlung meiner besten Projekte, die moderne Technologien,
+              Eine Sammlung meiner letzten Projekte, die moderne Technologien,
               kreative Lösungen und außergewöhnliches Design kombinieren.
             </motion.p>
           </div>
