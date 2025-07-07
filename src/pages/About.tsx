@@ -157,7 +157,7 @@ const About = () => {
                     className="w-full h-100 object-cover"
                   />
                 </div>
-                <div className="absolute -top-4 -left-4 w-full h-full bg-gradient-to-r from-accent-500/20 to-neon-blue/20 rounded-2xl -z-10" />
+                <div className="absolute -top-4 -left-4 w-full h-full rounded-2xl -z-10" />
               </motion.div>
             </div>
           </div>
