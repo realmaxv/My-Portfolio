@@ -5,6 +5,10 @@ import ProjectCard from "../components/ProjectCard";
 import tt1 from "../assets/toktok/notification.png";
 import tt2 from "../assets/toktok/overview.png";
 import tt3 from "../assets/toktok/post.png";
+import trans1 from "../assets/trans1.png";
+import trans2 from "../assets/trans2.png";
+import trans3 from "../assets/trans3.png";
+
 import {
   ArrowLeft,
   ExternalLink,
@@ -44,7 +48,7 @@ const ProjectDetail = () => {
 Die Anwendung wurde mit Fokus auf Benutzerfreundlichkeit, Performance und sprachliche Barrierefreiheit entwickelt. Durch die Kombination aus modernem Frontend-Stack und ausgelagerter KI-Logik bietet TransTube eine schnelle und präzise Inhaltsanalyse. Nutzer können gezielt nach Themen filtern und erhalten auf Knopfdruck eine strukturierte Zusammenfassung des Seiteninhalts – ganz ohne Sprachbarrieren.
 
 Ein stilvoller Dark Mode, flüssige Animationen sowie ein vollständig responsives Design machen die App zu einem angenehmen Werkzeug für die tägliche Online-Recherche.`,
-      image: `${tt3}`,
+      image: `https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800`,
       technologies: [
         "React",
         "TypeScript",
@@ -57,7 +61,7 @@ Ein stilvoller Dark Mode, flüssige Animationen sowie ein vollständig responsiv
       client: "Eigenprojekt",
       duration: "2 Monate",
       category: "KI / Webanalyse",
-      gallery: [tt3, tt2, tt1],
+      gallery: [trans1, trans2, trans3],
       features: [
         "KI-gestützte Webseiten-Zusammenfassung",
         "Sprachenübergreifende Analyse (multilingual)",
