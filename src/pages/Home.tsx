@@ -7,19 +7,25 @@ import { Code2, Zap, Users, Award } from "lucide-react";
 import me2 from "../assets/bewerbungsfoto.jpeg";
 import toktok from "../assets/toktok/logo.png";
 import avatarF from "../assets/avatarF.jpg";
-
+import logipic from "../assets/logipic/logipic1.png";
 const Home = () => {
   const featuredProjects = [
     {
       id: "1",
-      title: "TransTube",
+      title: "LogiPic",
       description:
-        "Eine KI-gestützte Web-App zur Zusammenfassung und Analyse von Webseiteninhalten – unabhängig von Sprache oder Länge.",
-      image:
-        "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-      githubUrl: "#",
-      liveUrl: "https://www.transtube.org/",
+        "Die smarte Web-App zur Mitarbeiter- und Etikettenplanung – optimiert für Mobile & PWA. Inklusive Leistungsübersicht & Wochenschicht-Planung.",
+      image: logipic,
+      technologies: [
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "Vite",
+        "shadcn/ui",
+        "localStorage",
+      ],
+      githubUrl: "https://github.com/realmaxv/logipic",
+      liveUrl: "https://logipic.netlify.app/",
       featured: true,
     },
     {
@@ -31,6 +37,18 @@ const Home = () => {
       technologies: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
       githubUrl: "https://github.com/realmaxv/toktok",
       liveUrl: "https://sctoktok.netlify.app/",
+      featured: true,
+    },
+    {
+      id: "3",
+      title: "TransTube",
+      description:
+        "Eine KI-gestützte Web-App zur Zusammenfassung und Analyse von Webseiteninhalten – unabhängig von Sprache oder Länge.",
+      image:
+        "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+      githubUrl: "#",
+      liveUrl: "https://www.transtube.org/",
       featured: true,
     },
   ];

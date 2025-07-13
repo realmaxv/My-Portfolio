@@ -4,13 +4,32 @@ import PageTransition from "../components/PageTransition";
 import ProjectCard from "../components/ProjectCard";
 import { Filter } from "lucide-react";
 import logo from "../assets/toktok/logo.png";
-
+import logipic from "../assets/logipic/logi.png";
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
   const projects = [
     {
       id: "1",
+      title: "LogiPic",
+      description:
+        "Die smarte Web-App zur Mitarbeiter- und Etikettenplanung – optimiert für Mobile & PWA. Inklusive Leistungsübersicht & Wochenschicht-Planung.",
+      image: logipic,
+      technologies: [
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "Vite",
+        "shadcn/ui",
+        "localStorage",
+      ],
+      githubUrl: "https://github.com/realmaxv/logipic",
+      liveUrl: "https://logipic.netlify.app/",
+      featured: true,
+      category: "mobile",
+    },
+    {
+      id: "2",
       title: "TransTube",
       description:
         "Eine KI-gestützte Web-App zur Zusammenfassung und Analyse von Webseiteninhalten – unabhängig von Sprache oder Länge.",
@@ -23,7 +42,7 @@ const Work = () => {
       category: "web",
     },
     {
-      id: "2",
+      id: "3",
       title: "TokTok",
       description:
         "Ein moderner Instagram-Clone mit Like-, Kommentar- und Profilfunktionen – entwickelt als Abschlussprojekt bei SuperCode.",
