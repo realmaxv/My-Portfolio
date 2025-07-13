@@ -8,7 +8,10 @@ import tt3 from "../assets/toktok/post.png";
 import trans1 from "../assets/trans1.png";
 import trans2 from "../assets/trans2.png";
 import trans3 from "../assets/trans3.png";
+import logipic from "../assets/logipic/logipic1.png";
+import logipic1 from "../assets/logipic/logipic2.png";
 
+import logipic2 from "../assets/logipic/logi.png";
 import {
   ArrowLeft,
   ExternalLink,
@@ -40,6 +43,40 @@ const ProjectDetail = () => {
   const allProjects: Project[] = [
     {
       id: "1",
+      title: "LogiPic",
+      description:
+        "Die smarte Web-App zur Mitarbeiter- und Etikettenplanung – optimiert für Mobile & PWA. Inklusive Leistungsübersicht & Wochenschicht-Planung.",
+      longDescription: `LogiPic ist eine moderne, responsive Web-App zur Planung von Mitarbeiterschichten und Etikettenleistung – speziell optimiert für mobile Nutzung, inklusive PWA-Unterstützung.
+
+Die Anwendung ermöglicht eine detaillierte Wochentags-Planung mit Start-/Endzeiten, individuellen Arbeitszeiten und Leistung pro Mitarbeiter (Pics/h). Ein übersichtliches Dashboard vergleicht die erwartete und geplante Etikettenleistung und unterstützt so bei effizienter Ressourcenplanung.
+
+Mobile First, installierbar wie eine App (PWA) – sowohl für Android als auch iOS. Darkmode inklusive. Ideal für Unternehmen mit wiederkehrenden Produktionsplänen und Etikettierprozessen.`,
+      image: logipic2,
+      technologies: [
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "Vite",
+        "shadcn/ui",
+        "localStorage",
+      ],
+      githubUrl: "https://github.com/realmaxv/logipic",
+      liveUrl: "https://logipic.netlify.app/",
+      client: "Eigenprojekt",
+      duration: "2 Wochen",
+      category: "Produktivität / PWA",
+      gallery: [logipic, logipic1],
+      features: [
+        "Mitarbeiterverwaltung mit Arbeitszeiten & Leistung",
+        "Wochentags-Planung mit Start-/Endzeiten & Pics/h",
+        "Dashboard mit Leistungsübersicht",
+        "Mobile First & als App installierbar (PWA)",
+        "localStorage-Datenspeicherung",
+        "Responsive UI mit Tailwind und shadcn/ui",
+      ],
+    },
+    {
+      id: "3",
       title: "TransTube",
       description:
         "Eine elegante Web-App zur KI-gestützten Analyse und Zusammenfassung von Webseiteninhalten – sprachenübergreifend.",
@@ -227,6 +264,26 @@ TokTok wurde bewusst "mobile first" und benutzerfreundlich gestaltet und zeichne
             </div>
           </div>
         </section>
+
+        {project.id === "1" && (
+          <section className="py-12 bg-dark-800/30">
+            <div className="max-w-md mx-auto px-4 text-center">
+              <h2 className="text-2xl font-bold mb-6 text-white">
+                LogiPic in Aktion 🎥
+              </h2>
+              <div className="relative w-full pb-[177.78%] overflow-hidden rounded-xl">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/wD8M9KvNJqU?si=p7YJmC3Ms6i82SYc&autoplay=0&rel=0"
+                  title="LogiPic Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Technologies */}
         <section className="py-12 bg-dark-800/30">
