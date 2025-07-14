@@ -32,8 +32,6 @@ const Impressum = () => {
               <p>
                 Telefon: +49 (0) 171 705 30 12
                 <br />
-                Telefax: +49 (0) 123 44 55 99
-                <br />
                 E-Mail:{" "}
                 <a href="mailto:kontakt@maxvossgaetter.de">
                   kontakt@maxvossgaetter.de
