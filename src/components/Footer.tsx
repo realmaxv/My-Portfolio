@@ -77,6 +77,20 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-dark-700 mt-8 pt-8 text-center text-gray-400">
+          <div className="mb-4 space-x-4 text-sm">
+            <a
+              href="/impressum"
+              className="hover:text-accent-500 transition-colors duration-200"
+            >
+              Impressum
+            </a>
+            <a
+              href="/datenschutz"
+              className="hover:text-accent-500 transition-colors duration-200"
+            >
+              Datenschutz
+            </a>
+          </div>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
