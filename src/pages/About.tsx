@@ -323,10 +323,9 @@ const About = () => {
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
                 Heute setze ich alles auf eine Karte: Ich habe meine
                 Leidenschaft zum Beruf gemacht und verfolge entschlossen meinen
-                Weg in der Webentwicklung. Diese Seite ist mein Portfolio – kein
-                Verkaufsangebot, sondern Ausdruck meines Lernwegs, meiner
-                Fähigkeiten und meiner Motivation, Teil eines engagierten
-                Entwicklerteams zu werden.
+                Weg in der Webentwicklung. Diese Seite ist auch mein Portfolio –
+                Ein Ausdruck meines Lernwegs, meiner Fähigkeiten und meiner
+                Motivation, Teil eines engagierten Entwicklerteams zu werden.
               </p>
             </motion.div>
           </div>
