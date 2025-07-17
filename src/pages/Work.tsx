@@ -29,20 +29,20 @@ const Work = () => {
       category: "mobile",
     },
     {
-      id: "2",
+      id: "3",
       title: "TransTube",
       description:
         "Eine KI-gestützte Web-App zur Zusammenfassung und Analyse von Webseiteninhalten – unabhängig von Sprache oder Länge.",
       image:
         "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-      githubUrl: "#",
+      githubUrl: "https://github.com/realmaxv/transtube-public",
       liveUrl: "https://www.transtube.org/",
       featured: true,
       category: "web",
     },
     {
-      id: "3",
+      id: "2",
       title: "TokTok",
       description:
         "Ein moderner Instagram-Clone mit Like-, Kommentar- und Profilfunktionen – entwickelt als Abschlussprojekt bei SuperCode.",
